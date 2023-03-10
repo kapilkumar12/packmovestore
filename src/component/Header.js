@@ -1,7 +1,9 @@
 import React from "react";
 import "./style.css";
+import { Link, useLocation } from "react-router-dom";
 // import $ from "jquery";
 const Header = () => {
+  const location = useLocation();
   function toggleContent() {
     var content = document.getElementById("content");
     var icon = document.getElementById("toggleIcon");
@@ -30,73 +32,116 @@ const Header = () => {
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid f-head">
         <div className="row">
-          <div className="col-lg-4 logo">
+          <div className="col-lg-4 logo ">
             <div>
               <img src="images/logo-white-dark.png" alt="" />
             </div>
           </div>
-          <div className="col-lg-8">
+          <div className="col-lg-8 ">
             <div className="nav">
               <ul>
                 <li>
-                  <a href="" className="active">
+                  <Link
+                    className={` ${location.pathname === "/" ? "active" : ""}`}
+                    to="/"
+                  >
                     Home
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="">Free Quote</a>
+                  <Link
+                    className={` ${
+                      location.pathname === "/quote" ? "active" : ""
+                    }`}
+                    to="/quote"
+                  >
+                    Free Quote
+                  </Link>
                 </li>
                 <li>
-                  <a href="">Projects</a>
+                  <Link
+                    className={` ${
+                      location.pathname === "/projects" ? "active" : ""
+                    }`}
+                    to="/projects"
+                  >
+                    Projects
+                  </Link>
                 </li>
                 <li className="dropdown">
-                  <a href="">Services</a>
+                  <Link
+                    className={` ${
+                      location.pathname === "/services" ? "active" : ""
+                    }`}
+                    to="/services"
+                  >
+                    Services
+                  </Link>
 
                   <div className="dropdown-content mt-2">
-                    <a href="">Pet Relocation</a>
+                    <Link to="/pet-relocation">Pet Relocation</Link>
 
-                    <a href="">Moving House</a>
+                    <Link to="/moving-house">Moving House</Link>
 
-                    <a href="">Office Relocation</a>
+                    <Link to="/office-relocation">Office Relocation</Link>
 
-                    <a href="">Rental Assistance</a>
+                    <Link to="/rental-assistance">Rental Assistance</Link>
 
-                    <a href="">Service Apartments</a>
+                    <Link to="/service-apartments">Service Apartments</Link>
                   </div>
                 </li>
                 <li>
-                  <a href="">Contact us</a>
+                  <Link
+                    className={` ${
+                      location.pathname === "/contact" ? "active" : ""
+                    }`}
+                    to="/contact"
+                  >
+                    Contact us
+                  </Link>
                 </li>
                 <li>
-                  <a href="">About us</a>
+                  <Link
+                    className={` ${
+                      location.pathname === "/about" ? "active" : ""
+                    }`}
+                    to="/about"
+                  >
+                    About us
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
+                  <Link to="">
                     <i className="fa-brands fa-facebook-f"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
+                  <Link to="">
                     <i className="fa-brands fa-twitter"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
+                  <Link to="">
                     <i className="fa-brands fa-flickr"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
+                  <Link to="">
                     <i className="fa-brands fa-linkedin-in"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li className="search">
-                  <a href="" className="search-icon">
+                  <Link
+                    to=""
+                    className="search-icon"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal"
+                  >
                     <i className="fa-solid fa-magnifying-glass "></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -105,44 +150,47 @@ const Header = () => {
       </div>
 
       {/* second header start */}
-      <div className="container-fluid">
-        <div className="secong-head">
-          <div>
+      <div className="container-fluid navbar2">
+        <div className="second-head">
+          <div className="second-navbar">
             <img src="images/logo.png" alt="" />
           </div>
-          <div>
-            <i className="fa-solid fa-magnifying-glass "></i>
-            <a onClick={toggleMenu} className="toggleicon">
-              <span id="menutoggleIcon">&#x2630;</span>
-            </a>
+          <div className="second-navbar">
+            <div className="second-nav-icon">
+              <a
+                href=""
+                className="second-nav-icon-search"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                <i className="fa-solid fa-magnifying-glass "></i>
+              </a>
+
+              <a onClick={toggleMenu} className="toggleicon">
+                <span id="menutoggleIcon">&#x2630;</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* <div>
-        <a onClick={toggleContent} className="toggleicon">
-          <span id="toggleIcon">&#x25BC;</span>
-        </a>
-        <div id="content"></div>
-      </div> */}
-
       <div className="container-fluid pt-5" id="menucontent">
-        <div className="secomd-nav" id="secomd-nav">
+        <div className="second-nav" id="second-nav">
           <ul>
             <li>
-              <a href="">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <hr />
             <li>
-              <a href="">Free Quote</a>
+              <Link to="/quote">Free Quote</Link>
             </li>
             <hr />
             <li>
-              <a href="">Projects</a>
+              <Link to="/projects">Projects</Link>
             </li>
             <hr />
             <li className="services">
-              <a href="">Services</a>
+              <Link to="/services">Services</Link>
               <div>
                 <a onClick={toggleContent} className="toggleicon">
                   <span id="toggleIcon">&#x25BC;</span>
@@ -150,15 +198,15 @@ const Header = () => {
                 <div id="content">
                   <div>
                     <hr />
-                    <a href="">Pet Relocation</a>
+                    <Link to="/pet-relocation">Pet Relocation</Link>
                     <hr />
-                    <a href="">Moving House</a>
+                    <Link to="/moving-house">Moving House</Link>
                     <hr />
-                    <a href="">Office Relocation</a>
+                    <Link to="/office-relocation">Office Relocation</Link>
                     <hr />
-                    <a href="">Rental Assistance</a>
+                    <Link to="/rental-assistance">Rental Assistance</Link>
                     <hr />
-                    <a href="">Service Apartments</a>
+                    <Link to="/service-apartments">Service Apartments</Link>
                     <hr />
                   </div>
                 </div>
@@ -166,11 +214,11 @@ const Header = () => {
             </li>
             <hr />
             <li>
-              <a href="">Contact us</a>
+              <Link to="/contact">Contact us</Link>
             </li>
             <hr />
             <li>
-              <a href="">About Us</a>
+              <Link to="/about">About Us</Link>
             </li>
             <hr />
           </ul>
@@ -178,6 +226,159 @@ const Header = () => {
       </div>
 
       {/* second header end */}
+
+      {/* third header  start*/}
+      <div className="container-fluid navbar3">
+        <div className="row">
+          <div className="col-lg-4 logo3">
+            <div>
+              <img src="images/logo.png" alt="" />
+            </div>
+          </div>
+          <div className="col-lg-8">
+            <div className="nav">
+              <ul>
+                <li>
+                  <Link
+                    className={` ${location.pathname === "/" ? "active" : ""}`}
+                    to="/"
+                  >
+                    Home
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    className={` ${
+                      location.pathname === "/quote" ? "active" : ""
+                    }`}
+                    to="/quote"
+                  >
+                    Free Quote
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={` ${
+                      location.pathname === "/projects" ? "active" : ""
+                    }`}
+                    to="/projects"
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li className="dropdown">
+                  <Link
+                    className={` ${
+                      location.pathname === "/services" ? "active" : ""
+                    }`}
+                    to="/services"
+                  >
+                    Services
+                  </Link>
+
+                  <div className="dropdown-content mt-2">
+                    <Link to="/pet-relocation">Pet Relocation</Link>
+
+                    <Link to="/moving-house">Moving House</Link>
+
+                    <Link to="/office-relocation">Office Relocation</Link>
+
+                    <Link to="/rental-assistance">Rental Assistance</Link>
+
+                    <Link to="/service-apartments">Service Apartments</Link>
+                  </div>
+                </li>
+                <li>
+                  <Link
+                    className={` ${
+                      location.pathname === "/contact" ? "active" : ""
+                    }`}
+                    to="/contact"
+                  >
+                    Contact us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={` ${
+                      location.pathname === "/about" ? "active" : ""
+                    }`}
+                    to="/about"
+                  >
+                    About us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="">
+                    <i className="fa-brands fa-facebook-f"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="">
+                    <i className="fa-brands fa-twitter"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="">
+                    <i className="fa-brands fa-flickr"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="">
+                    <i className="fa-brands fa-linkedin-in"></i>
+                  </Link>
+                </li>
+                <li className="search">
+                  <Link
+                    to=""
+                    className="search-icon"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal"
+                  >
+                    <i className="fa-solid fa-magnifying-glass "></i>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* third header end */}
+
+      {/*search  modal  start*/}
+
+      <div className="modal" id="myModal">
+        <div className="modal-dialog modal-fullscreen">
+          <div className="modal-content">
+            <div class="modal-head">
+              <div className="cancel-icon">
+                <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+              </div>
+            </div>
+
+            <div className="modal-body text-center">
+              <div>
+                <div className="modal-img">
+                  <img src="images/logo-white.png" alt="" />
+                </div>
+                <div className="text-center">
+                  <div class="input-box">
+                    {/* <i className="fa-solid fa-magnifying-glass "></i> */}
+                    <input
+                      type="text"
+                      placeholder="Type Word Then Press Enter"
+                    />
+
+                    <i className="button fa-solid fa-magnifying-glass "></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
