@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import "./style.css";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Pack Move Store - Home";
+  }, []);
   return (
     <>
       <Header />

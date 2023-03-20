@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
-import Header from "./Header";
+// import Header from "./Header";
 import { Link } from "react-router-dom";
+import HeaderSecond from "./HeaderSecond";
 
 const ContactUs = () => {
+  useEffect(() => {
+    document.title = "Pack Move Store - Contact Us";
+  }, []);
   return (
     <>
-      <Header />
+      <HeaderSecond />
 
-      <div className="contact-map ">
+      <div className="contact-map pt-4">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6630.017133714236!2d-117.918974!3d33.812092!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd7d12b3b5e6b%3A0x2ef62f8418225cfa!2sDisneyland%20Park!5e0!3m2!1sen!2sus!4v1678423373601!5m2!1sen!2sus"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          title="myMap"
         ></iframe>
       </div>
 
@@ -78,7 +83,7 @@ const ContactUs = () => {
                     placeholder="Your Name"
                     name="yname"
                     id="yname"
-                    class="form-control"
+                    className="form-control"
                     required
                   />
                 </div>
@@ -92,7 +97,7 @@ const ContactUs = () => {
                     placeholder="Transport Type"
                     name="transporttype"
                     id="transporttype"
-                    class="form-control"
+                    className="form-control"
                     required
                   />
                 </div>
@@ -104,7 +109,7 @@ const ContactUs = () => {
                     placeholder="Subject"
                     name="subject"
                     id="subject"
-                    class="form-control"
+                    className="form-control"
                     required
                   />
                 </div>
@@ -124,9 +129,6 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="col-lg-12 ">
-              {/* <b type="button" id="" class="send-btn">
-                Send Message
-              </b> */}
               <button className="form-control send-btan" type="submit" id="">
                 Send Message
               </button>

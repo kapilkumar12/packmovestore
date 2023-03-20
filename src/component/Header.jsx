@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 // import $ from "jquery";
 const Header = () => {
   const location = useLocation();
@@ -29,15 +30,40 @@ const Header = () => {
       icon.innerHTML = "&#x2630;"; // Change icon back to downward arrow
     }
   }
+  // scroll function
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  const [colorChange, setColorChange] = useState(false);
+  useEffect(() => {
+    const colorChangeScroll = () => {
+      setColorChange(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", colorChangeScroll);
+    return () => window.removeEventListener("scroll", colorChangeScroll);
+  });
 
   return (
     <>
-      <div className="container-fluid f-head">
-        <div className="row">
-          <div className="col-lg-4 logo ">
-            <div>
-              <img src="images/logo-white-dark.png" alt="" />
-            </div>
+      <header className={`container-fluid f-head ${sticky ? "sticky" : ""}`}>
+        <div className="row ">
+          {/* fix?'navbar fixed' :'navbar' */}
+          <div
+            className={`col-lg-4 logo ${
+              colorChange ? "colorChange active" : ""
+            }`}
+          >
+            {colorChange ? (
+              <img src="images/logo.png" alt="logo" />
+            ) : (
+              <img src="images/logo-white-dark.png" alt="logo" />
+            )}
           </div>
           <div className="col-lg-8 ">
             <div className="nav">
@@ -147,7 +173,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* second header start */}
       <div className="container-fluid navbar2">
@@ -157,18 +183,18 @@ const Header = () => {
           </div>
           <div className="second-navbar">
             <div className="second-nav-icon">
-              <a
+              <Link
                 href=""
                 className="second-nav-icon-search"
                 data-bs-toggle="modal"
                 data-bs-target="#myModal"
               >
                 <i className="fa-solid fa-magnifying-glass "></i>
-              </a>
+              </Link>
 
-              <a onClick={toggleMenu} className="toggleicon">
+              <Link onClick={toggleMenu} className="toggleicon">
                 <span id="menutoggleIcon">&#x2630;</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -192,9 +218,9 @@ const Header = () => {
             <li className="services">
               <Link to="/services">Services</Link>
               <div>
-                <a onClick={toggleContent} className="toggleicon">
+                <Link onClick={toggleContent} className="toggleicon">
                   <span id="toggleIcon">&#x25BC;</span>
-                </a>
+                </Link>
                 <div id="content">
                   <div>
                     <hr />
@@ -227,134 +253,14 @@ const Header = () => {
 
       {/* second header end */}
 
-      {/* third header  start*/}
-      <div className="container-fluid navbar3">
-        <div className="row">
-          <div className="col-lg-4 logo3">
-            <div>
-              <img src="images/logo.png" alt="" />
-            </div>
-          </div>
-          <div className="col-lg-8">
-            <div className="nav">
-              <ul>
-                <li>
-                  <Link
-                    className={` ${location.pathname === "/" ? "active" : ""}`}
-                    to="/"
-                  >
-                    Home
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    className={` ${
-                      location.pathname === "/quote" ? "active" : ""
-                    }`}
-                    to="/quote"
-                  >
-                    Free Quote
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={` ${
-                      location.pathname === "/projects" ? "active" : ""
-                    }`}
-                    to="/projects"
-                  >
-                    Projects
-                  </Link>
-                </li>
-                <li className="dropdown">
-                  <Link
-                    className={` ${
-                      location.pathname === "/services" ? "active" : ""
-                    }`}
-                    to="/services"
-                  >
-                    Services
-                  </Link>
-
-                  <div className="dropdown-content mt-2">
-                    <Link to="/pet-relocation">Pet Relocation</Link>
-
-                    <Link to="/moving-house">Moving House</Link>
-
-                    <Link to="/office-relocation">Office Relocation</Link>
-
-                    <Link to="/rental-assistance">Rental Assistance</Link>
-
-                    <Link to="/service-apartments">Service Apartments</Link>
-                  </div>
-                </li>
-                <li>
-                  <Link
-                    className={` ${
-                      location.pathname === "/contact" ? "active" : ""
-                    }`}
-                    to="/contact"
-                  >
-                    Contact us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={` ${
-                      location.pathname === "/about" ? "active" : ""
-                    }`}
-                    to="/about"
-                  >
-                    About us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="">
-                    <i className="fa-brands fa-facebook-f"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="">
-                    <i className="fa-brands fa-twitter"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="">
-                    <i className="fa-brands fa-flickr"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="">
-                    <i className="fa-brands fa-linkedin-in"></i>
-                  </Link>
-                </li>
-                <li className="search">
-                  <Link
-                    to=""
-                    className="search-icon"
-                    data-bs-toggle="modal"
-                    data-bs-target="#myModal"
-                  >
-                    <i className="fa-solid fa-magnifying-glass "></i>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* third header end */}
-
       {/*search  modal  start*/}
 
       <div className="modal" id="myModal">
         <div className="modal-dialog modal-fullscreen">
           <div className="modal-content">
-            <div class="modal-head">
+            <div className="modal-head">
               <div className="cancel-icon">
-                <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+                <i className="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
               </div>
             </div>
 
@@ -364,7 +270,7 @@ const Header = () => {
                   <img src="images/logo-white.png" alt="" />
                 </div>
                 <div className="text-center">
-                  <div class="input-box">
+                  <div className="input-box">
                     {/* <i className="fa-solid fa-magnifying-glass "></i> */}
                     <input
                       type="text"

@@ -1,33 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
-import Header from "./Header";
+
 import "./style.css";
 import { Link } from "react-router-dom";
+import HeaderSecond from "./HeaderSecond";
 
 const Projects = () => {
+  useEffect(() => {
+    document.title = "Pack Move Store - Our Projects";
+  }, []);
   return (
     <>
-      <Header />
+      <HeaderSecond />
       <div className="quote">
         <div className="quote-text">
           <h1>Projects Style 1</h1>
         </div>
-        <div class="breadcrumb-wrapper-inner text-center">
+        <div className="breadcrumb-wrapper-inner text-center">
           <span>
-            <Link title="Go to My Home Page." to="/" class="home">
-              <i class="fa-solid fa-house "></i>
+            <Link title="Go to My Home Page." to="/" className="home">
+              <i className="fa-solid fa-house "></i>
             </Link>
           </span>
-          <span class="themestek-bread-sep"> &nbsp; → &nbsp;</span>
+          <span className="themestek-bread-sep"> &nbsp; → &nbsp;</span>
           <span>
-            <span class="post post-page current-item">Projects Style 1</span>
+            <span className="post post-page current-item">
+              Projects Style 1
+            </span>
           </span>
         </div>
       </div>
 
       <div className="container p-5">
         <div className="row p-5">
-          <div className="col-sm  ">
+          <div className="col-sm  projecrfirst">
             <div>
               <div className="office-removel">
                 <img src="images/img-03.jpg" alt="" />
@@ -41,7 +47,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
           <div className="col-sm projects-div">
@@ -58,7 +64,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
           <div className="col-sm projects-div">
@@ -75,13 +81,13 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
         </div>
 
         <div className="row p-5">
-          <div className="col-sm ">
+          <div className="col-sm projecrfirst">
             <div>
               <div className="office-removel">
                 <img src="images/img-02.jpg" alt="" />
@@ -95,7 +101,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
           <div className="col-sm projects-div ">
@@ -112,7 +118,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
           <div className="col-sm projects-div">
@@ -129,12 +135,12 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
         </div>
         <div className="row p-5">
-          <div className="col-sm  ">
+          <div className="col-sm  projecrfirst">
             <div>
               <div className="office-removel">
                 <img src="images/img-03.jpg" alt="" />
@@ -148,7 +154,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
           <div className="col-sm projects-div">
@@ -165,7 +171,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
           <div className="col-sm projects-div">
@@ -182,12 +188,12 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
         </div>
         <div className="row p-5">
-          <div className="col-sm ">
+          <div className="col-sm projecrfirst">
             <div>
               <div className="office-removel">
                 <img src="images/img-02.jpg" alt="" />
@@ -201,7 +207,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
           <div className="col-sm projects-div ">
@@ -218,7 +224,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
           <div className="col-sm projects-div">
@@ -235,7 +241,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="plus-icon">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-plus"></i>
             </div>
           </div>
         </div>

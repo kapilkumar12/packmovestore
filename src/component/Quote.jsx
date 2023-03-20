@@ -1,25 +1,28 @@
-import React from "react";
-import Header from "./Header";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import HeaderSecond from "./HeaderSecond";
 
 const Quote = () => {
+  useEffect(() => {
+    document.title = "Pack Move Store - Quote";
+  }, []);
   return (
     <>
-      <Header />
+      <HeaderSecond />
       <div className="quote">
         <div className="quote-text">
           <h1>Quote Form</h1>
         </div>
-        <div class="breadcrumb-wrapper-inner text-center">
+        <div className="breadcrumb-wrapper-inner text-center">
           <span>
-            <Link title="Go to My Home Page." to="/" class="home">
-              <i class="fa-solid fa-house "></i>
+            <Link title="Go to My Home Page." to="/" className="home">
+              <i className="fa-solid fa-house "></i>
             </Link>
           </span>
-          <span class="themestek-bread-sep"> &nbsp; → &nbsp;</span>
+          <span className="themestek-bread-sep"> &nbsp; → &nbsp;</span>
           <span>
-            <span class="post post-page current-item">Quote Form</span>
+            <span className="post post-page current-item">Quote Form</span>
           </span>
         </div>
       </div>
@@ -42,7 +45,7 @@ const Quote = () => {
                       placeholder="Name"
                       name="name"
                       id="name"
-                      class="form-control"
+                      className="form-control"
                       required
                     />
                   </div>
@@ -54,7 +57,7 @@ const Quote = () => {
                       placeholder="Email Address"
                       name="email"
                       id="email"
-                      class="form-control"
+                      className="form-control"
                       required
                     />
                   </div>
@@ -68,7 +71,7 @@ const Quote = () => {
                       placeholder="Moving From"
                       name="mfrom"
                       id="mfrom"
-                      class="form-control"
+                      className="form-control"
                       required
                     />
                   </div>
@@ -80,7 +83,7 @@ const Quote = () => {
                       placeholder="Moving To"
                       name="mto"
                       id="mto"
-                      class="form-control"
+                      className="form-control"
                       required
                     />
                   </div>
@@ -93,7 +96,7 @@ const Quote = () => {
                       type="text"
                       placeholder="Transport Type"
                       name="ttype"
-                      class="form-control"
+                      className="form-control"
                       id="ttype"
                       required
                     />
@@ -107,7 +110,7 @@ const Quote = () => {
                       name="date"
                       id="date"
                       required
-                      class="form-control"
+                      className="form-control"
                     />
                   </div>
                 </div>
@@ -125,7 +128,7 @@ const Quote = () => {
                 </div>
               </div>
               <div>
-                <b type="button" id="" class="send-btn">
+                <b type="button" id="" className="send-btn">
                   Send Message
                 </b>
               </div>
