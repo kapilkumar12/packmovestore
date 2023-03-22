@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import HeaderSecond from "./HeaderSecond";
 import ProjectBox from "./ProjectBox";
 
-const Projects = (props) => {
+const Projects = () => {
   useEffect(() => {
     document.title = "Pack Move Store - Our Projects";
   }, []);
@@ -32,8 +32,8 @@ const Projects = (props) => {
         </div>
       </div>
 
-      <div className="container p-5">
-        <div className="row p-5">
+      <div className="container">
+        <div className="row project-section-div">
           <div className="col-sm projecrfirst pt-5">
             <ProjectBox
               imageUrl="images/img-03.jpg"

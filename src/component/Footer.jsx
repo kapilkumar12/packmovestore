@@ -56,7 +56,6 @@ const Footer = () => {
                 voluptate velit.
               </p>
               <div className="footer-icon">
-                {/* <ul> */}
                 <li>
                   <Link to="">
                     <div className="hover-icon">
@@ -101,8 +100,6 @@ const Footer = () => {
                     </div>
                   </Link>
                 </li>
-
-                {/* </ul> */}
               </div>
             </div>
             <div className="col-lg footer-cate">

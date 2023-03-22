@@ -53,7 +53,6 @@ const Header = () => {
     <>
       <header className={`container-fluid f-head ${sticky ? "sticky" : ""}`}>
         <div className="row ">
-          {/* fix?'navbar fixed' :'navbar' */}
           <div
             className={`col-lg-4 logo ${
               colorChange ? "colorChange active" : ""
@@ -271,7 +270,6 @@ const Header = () => {
                 </div>
                 <div className="text-center">
                   <div className="input-box">
-                    {/* <i className="fa-solid fa-magnifying-glass "></i> */}
                     <input
                       type="text"
                       placeholder="Type Word Then Press Enter"

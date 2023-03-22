@@ -256,7 +256,6 @@ const HeaderSecond = () => {
                 </div>
                 <div className="text-center">
                   <div className="input-box">
-                    {/* <i className="fa-solid fa-magnifying-glass "></i> */}
                     <input
                       type="text"
                       placeholder="Type Word Then Press Enter"

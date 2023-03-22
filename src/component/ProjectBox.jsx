@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import RedPlusIcon from "./RedPlusIcon";
 
 const ProjectBox = (props) => {
   let { imageUrl, title, service, urlTitle, urlService, redIcon } = props;
   return (
     <>
-      <div className="col-sm  projecrfirst">
+      <div className="projecrfirst text-center">
         <div>
           <div className="office-removel">
             <img src={imageUrl} alt="" />
@@ -19,11 +18,9 @@ const ProjectBox = (props) => {
             </h3>
           </div>
         </div>
-
         <div className="plus-icon">
           <i className={redIcon}></i>
         </div>
-        {/* <RedPlusIcon redIcon={"fa-solid fa-plus"} /> */}
       </div>
     </>
   );
