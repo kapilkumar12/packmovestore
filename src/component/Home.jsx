@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <>
       <Header />
-      {/* 
-      <div>
+
+      {/* <div>
         <div className="back-red"></div>
         <div>
           <div className="hero-slide">
@@ -40,38 +40,39 @@ const Home = () => {
                       slide.
                     </p>
                   </div>
+                  <div className="slide-btn">
+                    <button
+                      class="carousel-control-prev "
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon btn1 text-dark"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next btn2"
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="slide-btn">
-        <button
-          class="carousel-control-prev "
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            class="carousel-control-prev-icon btn1 text-dark"
-            aria-hidden="true"
-          ></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next btn2"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            class="carousel-control-next-icon bg-dark"
-            aria-hidden="true"
-          ></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div> */}
+
       <Footer />
     </>
   );

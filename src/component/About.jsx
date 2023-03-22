@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Footer from "./Footer";
-// import { useCountUp } from "react-countup";
 import { Link } from "react-router-dom";
 import HeaderSecond from "./HeaderSecond";
 import CountUp from "./CountUp";
@@ -9,10 +8,6 @@ const About = () => {
   useEffect(() => {
     document.title = "Pack Move Store - About Us";
   }, []);
-
-  // useCountUp({ ref: "counter", end: 750 });
-  // useCountUp({ ref: "counter1", end: 870 });
-  // useCountUp({ ref: "counter2", end: 320 });
   return (
     <>
       <HeaderSecond />
@@ -128,7 +123,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 counter-number-truck">
+          <div className="col-lg-4 counter-number-truck counterf">
             <div>
               <i className="fa-solid fa-thumbs-up"></i>
               <div className="counter-container">

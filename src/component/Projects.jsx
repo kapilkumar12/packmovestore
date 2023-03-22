@@ -4,8 +4,9 @@ import Footer from "./Footer";
 import "./style.css";
 import { Link } from "react-router-dom";
 import HeaderSecond from "./HeaderSecond";
+import ProjectBox from "./ProjectBox";
 
-const Projects = () => {
+const Projects = (props) => {
   useEffect(() => {
     document.title = "Pack Move Store - Our Projects";
   }, []);
@@ -33,216 +34,137 @@ const Projects = () => {
 
       <div className="container p-5">
         <div className="row p-5">
-          <div className="col-sm  projecrfirst">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-03.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Interior</Link>
-
-                <h3>
-                  <Link to="">Office Removels</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-03.jpg"
+              title="Interior"
+              urlService={""}
+              service="Office Removels"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
-          <div className="col-sm projects-div">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-02.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Pre Packing</Link>
-
-                <h3>
-                  <Link to="">Overseas Moving</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-02.jpg"
+              urlTitle={""}
+              title="Pre Packing"
+              urlService={""}
+              service="Overseas Moving"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
-          <div className="col-sm projects-div">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-03.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Moving</Link>
-
-                <h3>
-                  <Link to="">Warehousing Solutions</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-03.jpg"
+              urlTitle={""}
+              title={"Moving"}
+              urlService={""}
+              service="Warehousing Solutions"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
         </div>
 
         <div className="row p-5">
-          <div className="col-sm projecrfirst">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-02.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Moving</Link>
-
-                <h3>
-                  <Link to="">Moving Interstate</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-02.jpg"
+              urlTitle={""}
+              title={"Moving"}
+              urlService={""}
+              service="Moving Interstate"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
-          <div className="col-sm projects-div ">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-03.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Interior</Link>
 
-                <h3>
-                  <Link to="">Office Furniture Moving</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-03.jpg"
+              urlTitle={""}
+              title={"Interior"}
+              urlService={""}
+              service="Office Furniture Moving"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
-          <div className="col-sm projects-div">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-02.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Pre Packing</Link>
 
-                <h3>
-                  <Link to="">Living Room</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-02.jpg"
+              urlTitle={""}
+              title={"Pre Packing"}
+              urlService={""}
+              service="Living Room"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
         </div>
         <div className="row p-5">
-          <div className="col-sm  projecrfirst">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-03.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Interior</Link>
-
-                <h3>
-                  <Link to="">Beautiful House</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-03.jpg"
+              urlTitle={""}
+              title={"Interior"}
+              urlService={""}
+              service="Beautiful House"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
-          <div className="col-sm projects-div">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-02.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Moving</Link>
 
-                <h3>
-                  <Link to="">Fashion Shop</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-02.jpg"
+              urlTitle={""}
+              title={"Moving"}
+              urlService={""}
+              service="Fashion Shop"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
-          <div className="col-sm projects-div">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-03.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Pre Packing</Link>
 
-                <h3>
-                  <Link to="">Surface Cleaning</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-03.jpg"
+              urlTitle={""}
+              title={"Pre Packing"}
+              urlService={""}
+              service="Surface Cleaning"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
         </div>
         <div className="row p-5">
-          <div className="col-sm projecrfirst">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-02.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Moving</Link>
-
-                <h3>
-                  <Link to="">Residential Movers</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-02.jpg"
+              urlTitle={""}
+              title={"Moving"}
+              urlService={""}
+              service="Residential Movers"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
-          <div className="col-sm projects-div ">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-03.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Interior</Link>
 
-                <h3>
-                  <Link to="">Cultural House</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-03.jpg"
+              urlTitle={""}
+              title={"Interior"}
+              urlService={""}
+              service="Cultural House"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
-          <div className="col-sm projects-div">
-            <div>
-              <div className="office-removel">
-                <img src="images/img-02.jpg" alt="" />
-              </div>
-              <div className="office-removel-text">
-                <Link to="">Pre Packing</Link>
 
-                <h3>
-                  <Link to="">Organic Synthesis</Link>
-                </h3>
-              </div>
-            </div>
-            <div className="plus-icon">
-              <i className="fa-solid fa-plus"></i>
-            </div>
+          <div className="col-sm projecrfirst pt-5">
+            <ProjectBox
+              imageUrl="images/img-02.jpg"
+              urlTitle={""}
+              title={"Pre Packing"}
+              urlService={""}
+              service="Organic Synthesis"
+              redIcon="fa-solid fa-plus"
+            />
           </div>
         </div>
       </div>

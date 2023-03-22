@@ -571,7 +571,7 @@ a {
 
 /* home page start */
 /* hero section start */
-/* .back-red {
+.back-red {
   background-color: #e32222;
   display: inline-block;
   height: 83vh;
@@ -580,29 +580,33 @@ a {
   vertical-align: middle;
   position: relative;
   max-width: 100%;
-} */
+}
 
-/* .hero-slide {
+.hero-slide {
   position: relative;
   display: inline-block;
-} */
+}
 
-/* .slide {
-  position: absolute;
-  margin-top: -609px;
-  width: 1200px;
-  margin-left: 140px;
-} */
-/* .slide-btn button {
+.slide {
+  /* position: absolute; */
+  max-width: 100%;
+  /* margin-top: -609px; */
+  /* width: 1200px; */
+  /* margin-left: 140px; */
+}
+.slide-btn button {
   margin-top: 600px;
   margin-left: 66px;
   margin-right: 1200px;
-} */
-/* .btn1 {
+}
+.btn1 {
   background-color: white;
   color: #1a1a1a;
   padding: 40px;
-} */
+}
+.btan1 span {
+  color: #1a1a1a;
+}
 /* hero section end */
 
 /* home page end */
@@ -995,6 +999,7 @@ a {
   margin-left: 30px;
   padding-top: 20px;
 }
+
 .about-seconds ul {
   list-style: none;
 }
@@ -1018,13 +1023,22 @@ a {
   padding-left: 25px;
 }
 
-@media (min-width: 0px) and (max-width: 1280px) {
+/* @media (min-width: 0px) and (max-width: 1280px) {
   .about-seconds ul li span {
     font-size: 11px;
     font-weight: 500;
     padding-left: 4px;
   }
   .about-seconds ul li i {
+    font-size: 10px;
+  }
+} */
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .about-seconds {
+    width: 50%;
+  }
+  .about-seconds ul li span {
     font-size: 10px;
   }
 }
@@ -1083,6 +1097,18 @@ a {
   border-right-width: 1px !important;
   border-right-color: rgba(0, 0, 0, 0.1) !important;
   border-right-style: solid !important;
+}
+
+@media (min-width: 480px) and (max-width: 800px) {
+  .counterf {
+    width: 33.33%;
+  }
+  .counter {
+    font-size: 50px;
+  }
+  .counter-container {
+    margin: 0 0;
+  }
 }
 .about-bg-image {
   background: url(/public/images/img-02.jpg);
@@ -1174,6 +1200,8 @@ blockquote {
 }
 .about-bg-fdiv-content {
   padding: 100px 100px 100px 200px;
+  max-width: 100%;
+  /* margin: auto; */
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .about-bg-fdiv-content {
@@ -1343,7 +1371,8 @@ blockquote {
 .about-icon {
   display: flex;
   list-style: none;
-  column-gap: 35px;
+  /* column-gap: 35px; */
+  justify-content: space-between;
   padding: 10px;
 }
 .about-icon li {
