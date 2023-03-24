@@ -21,6 +21,7 @@ const CountUp = ({ start, end, timer }) => {
     return () => {
       isMounted = false;
     };
+    // eslint-disable-next-line
   }, [end, start]);
   return <>{state}</>;
 };
